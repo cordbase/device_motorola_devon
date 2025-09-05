@@ -36,6 +36,9 @@ TARGET_USES_MOTCAMERA4 := true
 
 $(call inherit-product, vendor/motorola/MotCamera4-bengal/motcamera4.mk)
 
+# LiveDisplay
+$(call soong_config_set,livedisplay_sysfs,enable_ab,true)
+
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service.st
