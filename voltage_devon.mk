@@ -13,6 +13,13 @@ $(call inherit-product, device/motorola/devon/device.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/voltage/config/common_full_phone.mk)
 
+# Bootanimation Resolution.
+TARGET_BOOT_ANIMATION_RES := 1920
+
+# VoltageOS flags.
+TARGET_FACE_UNLOCK_SUPPORTED := true
+VOLTAGE_BUILD_TYPE := UN-Official
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := voltage_devon
 PRODUCT_DEVICE := devon
