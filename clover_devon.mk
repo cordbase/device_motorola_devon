@@ -10,11 +10,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device
 $(call inherit-product, device/motorola/devon/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Clover stuff.
+$(call inherit-product, vendor/clover/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_devon
+PRODUCT_NAME := clover_devon
 PRODUCT_DEVICE := devon
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := moto g32
@@ -26,3 +26,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="devon_g-user 13 T2SNS33.73-22-3-15 f9ee6-5bd7d release-keys" \
     BuildFingerprint=motorola/devon_g/devon:13/T2SNS33.73-22-3-15/f9ee6-5bd7d:user/release-keys \
     DeviceProduct=devon_g
+
+# Clover flags
+CLOVER_BUILDTYPE := UNOFFICIAL
+TARGET_SUPPORTS_BLUR := false
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_QUICK_TAP := true
